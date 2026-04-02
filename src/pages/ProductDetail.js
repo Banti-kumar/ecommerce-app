@@ -8,7 +8,7 @@ function ProductDetail() {
 
   const { products, addToCart } = useContext(CartContext);
 
-  const product = products.find((p) => p.id === Number(id));
+  const product = products?.find((p) => p.id === Number(id));
 
   if (!product) {
     return (
@@ -24,7 +24,7 @@ function ProductDetail() {
       <button onClick={() => navigate("/")}>← Back</button>
 
       <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
-        <img src={product.images?.[0]} alt={product.title} width="300" />
+        <img src={product?.images?.[0]} alt={product?.title} width="300" />
 
         <div>
           <h2>{product.title}</h2>

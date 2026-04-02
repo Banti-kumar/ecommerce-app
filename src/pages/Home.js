@@ -14,7 +14,7 @@ function Home() {
       setProducts(data);
     };
     fetchData();
-  }, []);
+  }, [setProducts]);
 
   return (
     <div
@@ -31,7 +31,7 @@ function Home() {
           gap: "15px",
         }}
       >
-        {products.map((product) => (
+        {products?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
