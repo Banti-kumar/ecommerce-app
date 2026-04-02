@@ -19,7 +19,7 @@ function ProductCard({ product }) {
       }}
     >
       <img
-        src={product.thumbnail}
+        src={product.images?.[0]}
         alt={product.title}
         style={{ width: "100%", height: "150px", objectFit: "cover" }}
       />
