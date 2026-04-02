@@ -14,7 +14,7 @@ function Home() {
       setProducts(data);
     };
     fetchData();
-  }, []);
+  }, [setProducts]);
 
   return (
     <div
